@@ -11,27 +11,27 @@ local isMouseEnabled = UserInputService.MouseEnabled
 local scripts = {}
 
 if isTouchEnabled and not isMouseEnabled then
-    scripts.url = "https://raw.githubusercontent.com/HD10Z/Brainrots-laboratory/refs/heads/main/PhantomHubMobile.txt"
+    scripts.url = "https://raw.githubusercontent.com/anderziyy/Brainrots-laboratory-Mobile/refs/heads/main/PhantomHubMobile.txt"
     scripts.device = "MOBILE"
 elseif isMouseEnabled and not isTouchEnabled then
-    scripts.url = "https://raw.githubusercontent.com/HD10Z/Brainrots-laboratory-PC/refs/heads/main/PhantomHubPC.txt"
+    scripts.url = "https://raw.githubusercontent.com/anderziyy/Brainrots-laboratory-PC/refs/heads/main/PhantomHubPC.txt"
     scripts.device = "PC"
 elseif isMouseEnabled and isTouchEnabled then
     if LocalPlayer:FindFirstChild("PlayerGui") then
         local screenSize = LocalPlayer.PlayerGui.Parent.Parent:FindFirstChild("ScreenSize")
         if screenSize and screenSize.Value.X < 800 or screenSize and screenSize.Value.Y < 600 then
-            scripts.url = "https://raw.githubusercontent.com/HD10Z/Brainrots-laboratory/refs/heads/main/PhantomHubMobile.txt"
+            scripts.url = "https://raw.githubusercontent.com/anderziyy/Brainrots-laboratory-Mobile/refs/heads/main/PhantomHubMobile.txt"
             scripts.device = "MOBILE"
         else
-            scripts.url = "https://raw.githubusercontent.com/HD10Z/Brainrots-laboratory-PC/refs/heads/main/PhantomHubPC.txt"
+            scripts.url = "https://raw.githubusercontent.com/anderziyy/Brainrots-laboratory-PC/refs/heads/main/PhantomHubPC.txt"
             scripts.device = "PC"
         end
     else
-        scripts.url = "https://raw.githubusercontent.com/HD10Z/Brainrots-laboratory-PC/refs/heads/main/PhantomHubPC.txt"
+        scripts.url = "https://raw.githubusercontent.com/anderziyy/Brainrots-laboratory-PC/refs/heads/main/PhantomHubPC.txt"
         scripts.device = "PC"
     end
 else
-    scripts.url = "https://raw.githubusercontent.com/HD10Z/Brainrots-laboratory-PC/refs/heads/main/PhantomHubPC.txt"
+    scripts.url = "https://raw.githubusercontent.com/anderziyy/Brainrots-laboratory-PC/refs/heads/main/PhantomHubPC.txt"
     scripts.device = "PC"
 end
 
